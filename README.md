@@ -38,6 +38,53 @@ Day 2 dives into **embeddings** and **vector stores**, foundational tools in mod
 
 ---
 
+## 📅 Day 3: Agents & AI Autonomy
+
+### 🎯 Overview
+Day 3 introduces **AI agents**, which act autonomously to **observe, plan, and act** on their environment. They differ from traditional models by continuously assessing conditions and proactively making decisions. Topics include:
+
+- **Agent Architecture**: The **Model** as decision-maker, **Tools & Extensions** for external APIs, and an **Orchestration Layer** to manage workflows  
+- **Targeted Learning Techniques**: In-context learning, retrieval-based methods, and fine-tuning for domain tasks  
+- **Agentic RAG**: Combining AI agents with retrieval-augmented generation for dynamic data lookups  
+- **Multi-Agent Systems** & **AgentOps**: Coordinating specialized agents at scale and establishing DevOps-like practices for agent monitoring  
+- **Real-World Applications**: From **automotive AI** to enterprise automation and the concept of agents as “digital employees”
+
+### 📺 Watch the Podcast
+- [Part 1](https://www.youtube.com/watch?v=D3Kaqz7VW28&list=PLqFaTIg4myu_yKJpvF8WE2JfaG5kGuvoE&index=4)  
+- [Part 2](https://www.youtube.com/watch?v=7rbSwt-7odQ&list=PLqFaTIg4myu_yKJpvF8WE2JfaG5kGuvoE&index=5)
+
+---
+
+## 📅 Day 4: Domain-Specific LLMs & Specialized AI
+
+### 🎯 Overview
+Day 4 focuses on customizing LLMs for **specific industries** such as **healthcare** and **cybersecurity**, highlighting how specialized models can address nuanced challenges. Key points include:
+
+- **Why Domain-Specific?** Leveraging LLMs tailored to high-stakes fields (e.g., Med LMs, secm) to achieve better accuracy and context awareness  
+- **In-Context & Fine-Tuning Methods**: Adapt models to unique data (e.g., patient records, threat logs) and continually refine with expert feedback  
+- **Evaluation & Safety**: Implement governance, retrospective analysis, and compliance for sensitive domains  
+- **Future Potential**: Predictive modeling for disease trends or security threats, plus expansion to finance, law, and more
+
+### 📺 Watch the Podcast
+- [Solving Domain-Specific Problems Using LLMs](https://www.youtube.com/watch?v=MWqspvVvNzA)
+
+---
+
+## 📅 Day 5: Operationalizing Generative AI with MLOps on Vertex AI
+
+### 🎯 Overview
+Day 5 ties everything together by addressing **deployment, monitoring, and governance** of Generative AI systems. Using **Vertex AI** and MLOps practices, teams can streamline GenAI from prototype to production. Core topics include:
+
+- **5 Phases of GenAI Lifecycle**: Discover, Develop, Evaluate, Deploy, Govern  
+- **Chaining & Prompt Engineering**: Managing multi-model pipelines and treating prompts as both **data** and **code**  
+- **Evaluation & Monitoring**: Balancing subjective quality with automated checks, plus multi-level logging  
+- **AgentOps & Governance**: Extending MLOps to support autonomous agents and ensuring trustworthiness, version control, and compliance
+
+### 📺 Watch the Podcast
+- [Operationalizing Generative AI on Vertex AI](https://www.youtube.com/watch?v=Hbk8UXavHrk)
+
+---
+
 ## 🙌 Credits
 
 - **Course by Google**  
