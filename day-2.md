@@ -95,10 +95,3 @@
 This session highlights **how powerful and flexible embeddings are** in AI development — acting as a bridge between raw data and deep learning systems. When combined with vector databases and smart retrieval, they form the **core of many GenAI applications** today.
 
 ---
-
-Let me know if you'd like me to:
-- Format this into a GitHub `README.md` style
-- Add code snippets or tools (like `Chroma`, `LangChain`, `FAISS`)
-- Include more visuals or diagrams
-
-Ready to drop this into GitHub whenever you are 👌
