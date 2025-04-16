@@ -1,124 +1,133 @@
-
-
-
-# 💡 DAY 1: Deep Dive into Large Language Models (LLMs)
-
-
-## 🧠 Training Process
-
-Training LLMs typically involves three stages:
-
-- **Pre-training**: The model is trained on massive amounts of raw, unlabeled text to learn general language representations.
-- **Fine-tuning**: This stage adapts the pre-trained model to specific tasks using smaller labeled datasets.
-- **Reinforcement Learning from Human Feedback (RLHF)**: Human preferences are used to train a reward model, which then guides further fine-tuning.
-
-To reduce compute requirements during fine-tuning, **Parameter-Efficient Fine-Tuning (PEFT)** techniques are used, such as:
-
-- **Adapters**: Small trainable layers added to the network.
-- **LoRA / QLoRA**: Low-Rank Adaptation techniques that update only a fraction of the weights.
-- **Soft Prompting**: Using trainable embeddings instead of modifying full model weights.
+## 🧠 DAY 1 – Deep Dive into Large Language Models (LLMs) 
 
 ---
 
-## ✍️ Prompt Engineering Techniques
-
-Prompt engineering is crucial for getting high-quality outputs from LLMs. Techniques include:
-
-- **Zero-shot prompting**: Ask the model a question without any examples.
-- **One-shot / few-shot prompting**: Provide one or more examples to guide the response.
-- **Chain-of-Thought (CoT)**: Ask the model to show its reasoning before answering.
-- **Self-consistency**: Sample multiple reasoning paths and pick the most consistent answer.
-- **Tree of Thoughts (ToT)**: Explore multiple reasoning paths in parallel.
-- **ReAct**: Combine reasoning with the ability to take actions.
-- **Automatic Prompt Engineering (APE)**: Generate and evaluate prompts automatically.
-- **System Prompting**: Define a persistent context or behavior.
-- **Role Prompting**: Assign a persona to shape tone/style.
-- **Contextual Prompting**: Provide detailed background for relevance.
-- **Step-back Prompting**: Start with a broader question to prime knowledge.
+**Google AI Course - Companion Summary**  
+🔗 [Watch the Podcast – Part 1](https://www.youtube.com/watch?v=mQDlCZZsOyo&list=PLqFaTIg4myu8GFXsSEicf6q_ExhfOr5ck)  
+🔗 [Watch the Podcast – Part 2](https://www.youtube.com/watch?v=F_hJ2Ey4BNc&list=PLqFaTIg4myu8GFXsSEicf6q_ExhfOr5ck&index=2)
 
 ---
 
-## ⚙️ Sampling and Generation Techniques
+### 🔧 Training Process
 
-The method used to generate text greatly affects its quality:
+Large Language Models go through a 3-stage development cycle:
 
-- **Temperature**: Controls randomness; lower = more deterministic.
-- **Top-K sampling**: Limits token selection to top K probabilities.
-- **Top-P (nucleus) sampling**: Picks from the smallest set of tokens whose total probability exceeds a threshold.
-- **Greedy search**: Picks the most probable token at each step.
-- **Random sampling**: Adds diversity but may reduce coherence.
-- **Best-of-n sampling**: Generates multiple completions and picks the best.
+- **Pre-training**  
+  Learn general language patterns from massive unlabeled datasets.
 
----
+- **Fine-tuning**  
+  Adapt the model for specific tasks using smaller labeled datasets.
 
-## 🚀 Model Evolution
+- **RLHF (Reinforcement Learning from Human Feedback)**  
+  Models learn from human preferences via a reward model to align better with human expectations.
 
-- **GPT-1**: Introduced generative pre-training + fine-tuning.
-- **BERT**: Encoder-only, focused on understanding tasks.
-- **GPT-2**: Larger model with strong zero-shot performance.
-- **GPT-3**: 175B parameters; great few-shot generalization.
-- **InstructGPT**: GPT-3 + human feedback for instruction-following.
-- **GPT-3.5**: Improved reasoning and efficiency.
-- **GPT-4**: Multi-modal with stronger reasoning and tool use.
-- **LaMDA**: Dialogue-optimized model from Google.
-- **Gopher**: DeepMind’s language model.
-- **PaLM & PaLM 2**: Google’s models for reasoning, multilingual tasks, and code.
-- **Gemini**: Multi-modal successor to PaLM with TPU optimization.
-- **Gemma**: Lightweight, open-source model family (text-only).
-- **LLaMA 3**: Meta’s powerful open-source LLMs.
-- **Mistral**: Efficient, high-performance open models.
-- **O1 Models**: Transparent, fine-tunable open-source models.
-- **DeepSeek**: Introduced Group Relative Policy in RL.
+➡️ **Parameter-Efficient Fine-Tuning (PEFT)** techniques help reduce training costs:
+- **Adapters** – Lightweight modules inserted into model layers.
+- **LoRA / QLoRA** – Low-Rank Adaptation for minimal parameter updates.
+- **Soft Prompting** – Trainable input embeddings without altering model weights.
 
 ---
 
-## ⚡ Inference Optimization
+### ✍️ Prompt Engineering Techniques
 
-Techniques to improve speed and efficiency:
+Prompting is key to getting smart outputs from LLMs. Strategies include:
 
-- **Quantization**: Reduces weight precision to save memory.
-- **Quantization-Aware Training (QAT)**: Maintains accuracy while quantizing during training.
-- **Distillation**: Trains smaller models to mimic larger ones.
-- **Flash Attention**: Optimized attention for faster inference.
-- **Prefix Caching**: Reuses previous token computations.
-- **Speculative Decoding**: Drafts tokens with a small model, validates with a larger one.
-
----
-
-## 📏 Model Evaluation
-
-Evaluation varies by use case and combines auto metrics + human feedback:
-
-- **Accuracy**: Factual correctness.
-- **Helpfulness**: Matches user intent.
-- **Creativity**: Innovative responses.
-- **BLEU / ROUGE**: Metrics for translation/summarization.
-- **Human feedback**: Direct user/annotator assessment.
-- **LLM-as-a-judge**: Models evaluate other models' outputs.
+- **Zero-shot** – Ask directly, no examples.
+- **Few-shot / One-shot** – Provide a few guiding examples.
+- **Chain-of-Thought (CoT)** – Encourage step-by-step reasoning.
+- **Self-consistency** – Sample multiple reasoning paths and choose the best.
+- **Tree of Thoughts (ToT)** – Parallel reasoning branches.
+- **ReAct** – Mix reasoning and actions (e.g., calling tools).
+- **System Prompting** – Set the model's behavior or role.
+- **Role Prompting** – Define a persona for style/tone control.
+- **Contextual Prompting** – Add background or documents for relevance.
+- **Step-back Prompting** – Zoom out to reframe questions.
+- **APE (Auto Prompt Engineering)** – Let the model iterate and pick effective prompts.
 
 ---
 
-## 🛠 Applications of LLMs
+### ⚙️ Sampling & Generation Methods
 
-- ✅ Code generation
-- 🛠 Code explanation & debugging
-- 🌍 Machine translation
-- 📝 Summarization
-- 🤖 Chatbots and assistants
-- 🧾 Text classification (spam detection, sentiment, etc.)
-- 🔍 Information retrieval and RAG
-- 🎨 Multimodal tasks (text + image/audio/video)
+Controls how the model generates text:
+
+- **Temperature** – Lower = focused & deterministic; higher = diverse & creative.
+- **Top-K Sampling** – Pick from top K likely tokens.
+- **Top-P (Nucleus)** – Sample from smallest token set with cumulative probability over a threshold.
+- **Greedy Search** – Always pick the most probable token (risk: repetitive output).
+- **Random Sampling** – More diverse but less coherent.
+- **Best-of-n** – Generate several completions and select the best.
 
 ---
 
-## ✅ Best Practices
+### 📈 Evolution of Language Models
 
-- Keep prompts clear and goal-oriented
-- Use few-shot examples for better guidance
-- Control output format (e.g., JSON, CSV)
-- Experiment with temperature and sampling
-- Log prompt/output pairs for analysis
-- Use validators to ensure structured output correctness
-- Add reasoning steps for complex tasks (Chain-of-Thought)
-- Collaborate, iterate, and document your findings
+| Model         | Highlights |
+|---------------|------------|
+| **GPT-1**      | Intro to generative pre-training + fine-tuning |
+| **BERT**       | Encoder-only; excels at classification |
+| **GPT-2**      | Strong zero-shot capabilities |
+| **GPT-3**      | 175B params; great at few-shot tasks |
+| **InstructGPT**| GPT-3 + human feedback for instructions |
+| **GPT-3.5/4**  | Improved reasoning, multi-modal support |
+| **LaMDA**      | Dialogue-focused by Google |
+| **Gopher**     | DeepMind’s large model |
+| **PaLM / PaLM 2** | Great for code & reasoning |
+| **Gemini**     | Multi-modal, TPU-optimized (Google) |
+| **Gemma**      | Lightweight, open-source |
+| **LLaMA 3**     | Meta’s powerful open-source family |
+| **Mistral**     | Compact and high-performance |
+| **O1 Models**   | Transparent and tunable |
+| **DeepSeek**    | RL innovations (Group Relative Policy) |
 
+---
+
+### ⚡ Inference Optimization Techniques
+
+Speed up and scale model inference with these tools:
+
+- **Quantization** – Use lower-precision weights to save memory.
+- **QAT (Quantization-Aware Training)** – Train with quantization in mind.
+- **Distillation** – Smaller models learn from larger ones.
+- **Flash Attention** – Faster and more efficient attention computation.
+- **Prefix Caching** – Avoid recomputing previous tokens.
+- **Speculative Decoding** – Use a smaller model to guess tokens, then validate with a larger model.
+
+---
+
+### 📏 Evaluation Strategies
+
+LLMs are evaluated using a mix of automatic and human methods:
+
+- **Accuracy** – Factual correctness.
+- **Helpfulness** – Relevance to user intent.
+- **Creativity** – Novel and thoughtful responses.
+- **BLEU / ROUGE** – Standard metrics for text generation.
+- **Human Feedback** – Manual scoring of responses.
+- **LLM-as-a-Judge** – Use another LLM to rate outputs.
+
+---
+
+### 🛠️ LLM Applications
+
+- ✅ Code generation & explanation  
+- 🌍 Translation & localization  
+- 📝 Summarization  
+- 🤖 Chatbots & virtual agents  
+- 🧾 Text classification (e.g., spam, sentiment)  
+- 🔍 Information retrieval & RAG systems  
+- 🎨 Multimodal AI (text + image/audio/video)
+
+---
+
+### ✅ Best Practices
+
+- Write **clear, focused prompts**
+- Use **few-shot examples** for guidance
+- **Structure output** with formats like JSON or CSV
+- Adjust **temperature & sampling** for tone control
+- **Log and analyze** prompt-output pairs
+- Use **validators** to check structured outputs
+- Add **reasoning steps** for complex answers (e.g., CoT)
+- Keep iterating and document learnings!
+
+---
