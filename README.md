@@ -2,6 +2,7 @@
 
 Welcome to the summary and key takeaways from Google’s **5-Day Generative AI Intensive** course. This repository provides **condensed notes**, **insights**, and **resources** from each day of the program — designed to help you quickly grasp the core concepts and practical applications of Generative AI.
 
+
 ---
 
 ## 📅 Day 1: Foundations of Generative AI
@@ -20,6 +21,9 @@ This section introduces the core principles behind Generative AI, with a focus o
 - [Part 1](https://www.youtube.com/watch?v=mQDlCZZsOyo&list=PLqFaTIg4myu8GFXsSEicf6q_ExhfOr5ck)  
 - [Part 2](https://www.youtube.com/watch?v=F_hJ2Ey4BNc&list=PLqFaTIg4myu8GFXsSEicf6q_ExhfOr5ck&index=2)
 
+## 🗂️ Quick Access
+[📅 Day 1: Foundations of Generative AI](./day-1.md)
+
 ---
 
 ## 📅 Day 2: Embeddings and Vector Stores
@@ -35,6 +39,10 @@ Day 2 dives into **embeddings** and **vector stores**, foundational tools in mod
 
 ### 📺 Watch the Podcast
 - [Embeddings & Vector Stores](https://www.youtube.com/watch?v=xCAVsst6WJ8)
+
+
+## 🗂️ Quick Access
+[📅 Day 2: Embeddings and Vector Stores](./day-2.md)
 
 ---
 
@@ -53,6 +61,11 @@ Day 3 introduces **AI agents**, which act autonomously to **observe, plan, and a
 - [Part 1](https://www.youtube.com/watch?v=D3Kaqz7VW28&list=PLqFaTIg4myu_yKJpvF8WE2JfaG5kGuvoE&index=4)  
 - [Part 2](https://www.youtube.com/watch?v=7rbSwt-7odQ&list=PLqFaTIg4myu_yKJpvF8WE2JfaG5kGuvoE&index=5)
 
+
+
+## 🗂️ Quick Access
+[📅 Day 3: Agents & AI Autonomy](./day-3.md)
+
 ---
 
 ## 📅 Day 4: Domain-Specific LLMs & Specialized AI
@@ -68,6 +81,11 @@ Day 4 focuses on customizing LLMs for **specific industries** such as **healthca
 ### 📺 Watch the Podcast
 - [Solving Domain-Specific Problems Using LLMs](https://www.youtube.com/watch?v=MWqspvVvNzA)
 
+
+
+## 🗂️ Quick Access
+[📅 Day 4: Domain-Specific LLMs & Specialized AI](./day-4.md)
+
 ---
 
 ## 📅 Day 5: Operationalizing Generative AI with MLOps on Vertex AI
@@ -82,6 +100,11 @@ Day 5 ties everything together by addressing **deployment, monitoring, and gover
 
 ### 📺 Watch the Podcast
 - [Operationalizing Generative AI on Vertex AI](https://www.youtube.com/watch?v=Hbk8UXavHrk)
+
+
+
+## 🗂️ Quick Access
+[📅 Day 5: Operationalizing GenAI with MLOps](./day-5.md)
 
 ---
 
